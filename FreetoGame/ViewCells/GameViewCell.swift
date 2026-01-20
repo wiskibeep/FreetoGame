@@ -14,6 +14,11 @@ class GameViewCell: UITableViewCell {
     @IBOutlet weak var titlelabel: UILabel!
     
     
+
+
+    @IBOutlet weak var ThumabailImagenView: UIImageView!
+    @IBOutlet weak var cardView : UIView!
+    
     
     
     override func awakeFromNib() {
@@ -31,6 +36,12 @@ class GameViewCell: UITableViewCell {
         func configure (with game : Game)
     {
         titlelabel.text = game.title
+        
+        ThumabailImagenView.loadFrom(url: game.thumbnail)
+        
+        cardView.layer.cornerRadius = 29
+
+        cardView.layer.masksToBounds = true
     }
 
 }
