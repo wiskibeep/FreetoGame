@@ -44,14 +44,14 @@ class GameProvider {
         //MARK: LLAMAR A UN JUEGO
        static func getGameByID( id: Int) async -> Game? {
             // esto devuleve el juego directamente
-           let url = URL(string:"\(Constants.SERIVER_BASE_URL)/games?id=\(id)")
+           let url = URL(string:"\(Constants.SERIVER_BASE_URL)/game?id=\(id)")
             
             guard let url = url else {
                 print("Invakid url")
                 return nil
             }
             do {
-                let (data,_ ) = try await URLSession.shared.data(from: url)
+                let (data,_ ) = try await URLSession.shared.data(from:url)
                 let result = try JSONDecoder().decode(Game.self, from: data)
                 return result
             }
