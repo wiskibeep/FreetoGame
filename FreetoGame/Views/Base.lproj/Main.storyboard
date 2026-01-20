@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Gameviewcell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yza-Wk-bsm" customClass="GameViewCell" customModule="FreetoGame" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Game Cell" id="yza-Wk-bsm" customClass="GameViewCell" customModule="FreetoGame" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yza-Wk-bsm" id="CWK-5m-NAH">
@@ -52,6 +52,9 @@
                             <constraint firstItem="Gun-An-l6D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XNp-0K-kjN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Gun-An-l6D" id="NaC-U1-E7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
