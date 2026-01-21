@@ -21,6 +21,14 @@ class GameViewCell: UITableViewCell {
     
     
     
+    // añadimos el genero
+    @IBOutlet weak var genreLabel: UILabel!
+    // AÑADIMOS LA IMAGEN
+    @IBOutlet weak var platformImagenView: UIImageView!
+    
+    // añadimos la descripcion
+    @IBOutlet weak var shortDesciptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,6 +50,25 @@ class GameViewCell: UITableViewCell {
         cardView.layer.cornerRadius = 29
 
         cardView.layer.masksToBounds = true
+        
+        
+        
+        // MAS INFO
+        genreLabel.text = game.genre
+        
+        shortDesciptionLabel.text = game.shortDescription
+
+        
+        
+        
+        
+        
+        platformImagenView.image = if game.platform == "PC (Windows)" {
+            UIImage(systemName: "desktopcomputer")
+        } else {
+            UIImage(systemName: "safari")
+        }
+        
     }
 
 }

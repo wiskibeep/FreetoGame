@@ -37,6 +37,8 @@ class GameProvider {
         catch {
             
             print("ayudaaa")
+            //print(error.localizedDescription)  no ayudaaa
+            print ("ERROR info: \(error)") // esto va mejor para ver el codigo de error
             return []
         }
     }
@@ -56,6 +58,9 @@ class GameProvider {
                 return result
             }
             catch {
+               // print (error.localizedDescription)
+                print("ERRor info: \(error)")
+                
                 print("ayudaaa individual")
                 return nil
                 
