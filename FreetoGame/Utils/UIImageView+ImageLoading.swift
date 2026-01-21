@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: codigo basico para carhar la Image sin que carge de now charging
 extension UIImageView {
     func loadFrom(url: URL) {
         DispatchQueue.global().async { [weak self] in

@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+//MARK: fucnion inicial de la lista
 class ListViewController: UIViewController, UITableViewDataSource {
     
     // Enlace a la tabla de la interfaz (debe estar conectado en el storyboard)

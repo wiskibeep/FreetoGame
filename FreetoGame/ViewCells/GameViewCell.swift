@@ -15,8 +15,9 @@ class GameViewCell: UITableViewCell {
     
     
 
-
+// añadimos el id y la asignacion de ma imagen
     @IBOutlet weak var ThumabailImagenView: UIImageView!
+    // Y de la card para reloud 
     @IBOutlet weak var cardView : UIView!
     
     

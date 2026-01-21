@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+// MARK: Link de la WEB API
 class Constants {
     static let SERIVER_BASE_URL: String = "https://www.freetogame.com/api"
 

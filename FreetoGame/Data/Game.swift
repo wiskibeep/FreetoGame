@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// MARK: crear lo que bamos a sacar de la API
 struct Game: Codable {
     
     let id: Int
