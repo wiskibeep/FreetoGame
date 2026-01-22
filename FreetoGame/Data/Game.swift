@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 // MARK: crear lo que bamos a sacar de la API
 struct Game: Codable {
     
@@ -30,8 +31,17 @@ struct Game: Codable {
     // ejemplo abrir una caja dentro de otra
     
     let systemRequirements : SystemRequirements?
-    let screenshots : [Screenshot]?
+    let screenshots : [screenShot]?
     
+    
+    func getPlatformImage() -> UIImage? {
+        if platform.contains ("Windows") {
+            UIImage(systemName: "desktopcomputer")
+        } else {
+            UIImage(systemName: "safari")
+        }
+        
+    }
     enum CodingKeys: String, CodingKey {
         case shortDescription = "short_description"
         case gameURL = "game_url"
@@ -53,7 +63,7 @@ struct SystemRequirements: Codable {
     let graphics: String
 }
 
-struct Screenshot: Codable {
+struct screenShot: Codable {
     let image: String
 }
 
