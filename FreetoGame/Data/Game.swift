@@ -55,12 +55,24 @@ struct Game: Codable {
     }
 }
 
-struct SystemRequirements: Codable {
+struct SystemRequirements: Codable, CustomStringConvertible {
     let os: String
     let processor: String
     let memory: String
     let storage: String
     let graphics: String
+
+    // Representación amigable para mostrar en UI
+    var description: String {
+        [
+            
+            "OS: \(os)",
+            "Processor: \(processor)",
+            "Memory: \(memory)",
+            "Graphics: \(graphics)",
+            "Storage: \(storage)"
+        ].joined(separator: "\n")
+    }
 }
 
 struct screenShot: Codable {

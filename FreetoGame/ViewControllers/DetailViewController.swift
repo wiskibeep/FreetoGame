@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var platformImagenView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var requisitosLabel: UILabel!
     
     var game: Game!
     
@@ -42,6 +43,9 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
         genreLabel.text = game.genre
         descriptionLabel.text = game.description ?? "Sin descripción"
         platformImagenView.image = game.getPlatformImage()
+        
+        // Mostrar requisitos mínimos si existen
+        requisitosLabel.text = game.systemRequirements?.description ?? "Sin requisitos"
     }
     
     // MARK: - Métodos de UICollectionViewDataSource
