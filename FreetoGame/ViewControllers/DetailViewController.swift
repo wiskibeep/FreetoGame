@@ -46,6 +46,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
         
         // Mostrar requisitos mínimos si existen
         requisitosLabel.text = game.systemRequirements?.description ?? "Sin requisitos"
+        
     }
     
     // MARK: - Métodos de UICollectionViewDataSource
@@ -65,12 +66,10 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
     
 
     
-    /*
-    // MARK: - Navigation (si necesitas preparar algo antes de un segue)
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+    @IBAction func tooggleDescription(_ sender: Any) {
+        descriptionLabel.numberOfLines = descriptionLabel.numberOfLines == 0 ? 3 : 0
     }
-    */
+    
 }
 
