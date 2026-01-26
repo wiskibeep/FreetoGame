@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK: fucnion inicial de la lista
-class ListViewController: UIViewController, UITableViewDataSource {
+class ListViewController: UIViewController, UITableViewDataSource{
 
     // Enlace a la tabla de la interfaz (debe estar conectado en el storyboard)
     @IBOutlet weak var tableView: UITableView!
@@ -17,17 +17,18 @@ class ListViewController: UIViewController, UITableViewDataSource {
     
     
     // Almacena la lista de juegos que se mostrarán en la tabla (datos originales)
-    private var gamelist: [Game] = []
+     var gamelist: [Game] = []
 
     // Lista filtrada según la búsqueda
-    private var filteredGames: [Game] = []
+     var filteredGames: [Game] = []
 
     // Controlador de búsqueda integrado en la barra de navegación
-    private let searchController = UISearchController(searchResultsController: nil)
+     let searchController = UISearchController(searchResultsController: nil)
 
     // Guardar texto de búsqueda actual
-    private var currentSearchText: String = ""
+     var currentSearchText: String = ""
 
+    
     
     
     
@@ -107,7 +108,7 @@ class ListViewController: UIViewController, UITableViewDataSource {
         let indexPath = tableView.indexPathForSelectedRow!
         
         
-        // variable de guardar de
+        
         let game = filteredGames[indexPath.row]
         detailViewController.game = game
 
@@ -128,3 +129,15 @@ extension ListViewController: UISearchResultsUpdating {
         applyFilterAndReload()
     }
 }
+
+
+
+
+/*
+//
+func searchBar (_searchBar : UISearchBar, textDidChange searchText: String ){
+    filtredGameList = originalGameList
+    game.title.localizedLowercase.contains(searchText)
+}
+
+*/

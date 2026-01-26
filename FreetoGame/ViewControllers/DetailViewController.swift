@@ -17,6 +17,15 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var requisitosLabel: UILabel!
     
+
+    
+    @IBAction func Openstore(_ sender: Any) {
+        if let url = URL(string: game.gameURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
     var game: Game!
     
     override func viewDidLoad() {
